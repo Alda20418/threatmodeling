@@ -38,8 +38,8 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "2d00ea98-e1d2-4b3d-8377-d826e2c74b6a",
             "zIndex": 1,
+            "id": "2d00ea98-e1d2-4b3d-8377-d826e2c74b6a",
             "data": {
               "type": "tm.Flow",
               "name": "Data Flow",
@@ -76,8 +76,8 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "471c7d73-547c-4684-9f0c-94b1463e9cb4",
             "zIndex": 2,
+            "id": "471c7d73-547c-4684-9f0c-94b1463e9cb4",
             "data": {
               "type": "tm.Flow",
               "name": "Data Flow",
@@ -114,11 +114,11 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "f955f2ec-1d33-4ea2-8184-b248284b56bf",
             "zIndex": 3,
+            "id": "f955f2ec-1d33-4ea2-8184-b248284b56bf",
             "data": {
               "type": "tm.Flow",
-              "name": "User 3",
+              "name": "Data Flow",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -152,17 +152,57 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "4088a0a0-bca2-46f4-b4ae-f77270820e59",
             "zIndex": 4,
+            "id": "4088a0a0-bca2-46f4-b4ae-f77270820e59",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Chellphones",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "privilegeLevel": "",
               "hasOpenThreats": false,
-              "threats": [],
+              "threats": [
+                {
+                  "id": "6afc6acf-3d6f-45fe-bf79-42b03a979cd7",
+                  "title": "Cellphone Tampering",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Someone intending to impersonate the phone user and having access to it can open one of the phone's applications and pretend to be that person by sending a message or performing other actions.",
+                  "mitigation": "Utilize biometric data and set up a password to access the phone and important applications. Additionally, it is crucial not to share passwords with other users.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 30,
+                  "score": "4"
+                },
+                {
+                  "id": "86c211ff-92f5-48d2-8f0a-562262024642",
+                  "title": "Cellphone Information disclosure",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Someone who wants to share data from the phone or that is stored on it.",
+                  "mitigation": "Use passwords or biometric data to access the mobile phone and the applications where sensitive information is stored.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 31,
+                  "score": "4"
+                },
+                {
+                  "id": "7cc32ef0-37f7-4712-8e57-7ebb8b2b10ab",
+                  "title": "Cellphone DoS",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Someone with the intention of blocking access to the phone.",
+                  "mitigation": "Configure the phone to prevent it from locking after a certain number of attempts and physically protect the device.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 32,
+                  "score": "7"
+                }
+              ],
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
@@ -190,17 +230,57 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "2a47b8e8-0404-4357-845b-8655b4daa048",
             "zIndex": 5,
+            "id": "2a47b8e8-0404-4357-845b-8655b4daa048",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Laptops",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "privilegeLevel": "",
               "hasOpenThreats": false,
-              "threats": [],
+              "threats": [
+                {
+                  "id": "6d39639e-f03f-4853-8ab4-094c4a1e79bf",
+                  "title": "Laptop Tampering",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Someone intending to impersonate the laptop user and having access to it can open one of the laptop's applications and pretend to be that person by sending a message or performing other actions.",
+                  "mitigation": "Set up a password or use biometric data to access the computer, as well as critical applications.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 34,
+                  "score": "4"
+                },
+                {
+                  "id": "621262fc-b822-4b47-881f-c8e8acdd405a",
+                  "title": "Laptop Information disclosure",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Someone who wants to share data from the laptop or that is stored on it.",
+                  "mitigation": "Use passwords or biometric data to access the laptop and the applications where sensitive information is stored.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 35,
+                  "score": "4"
+                },
+                {
+                  "id": "a8866556-3b15-4db8-9d99-7e7951c5dd45",
+                  "title": "Cellphone DoS",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Someone with the intention of blocking access to the laptop.",
+                  "mitigation": "Configure the laptop to prevent it from locking after a certain number of attempts and physically protect the device, as well as block the ports that are not in use.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 36,
+                  "score": "4"
+                }
+              ],
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
@@ -228,22 +308,62 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 6,
             "id": "dd7a3869-beb1-40ad-967c-32d2cf522ae1",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "PC",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "privilegeLevel": "",
               "hasOpenThreats": false,
-              "threats": [],
+              "threats": [
+                {
+                  "id": "10eba4e9-94b0-4204-98bf-51351636e349",
+                  "title": "PC Tampering",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Someone intending to impersonate the PC user and having access to it can open one of the PC's applications and pretend to be that person by sending a message or performing other actions.",
+                  "mitigation": "Set up a password or use biometric data to access the PC, as well as critical applications.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 38,
+                  "score": "PC"
+                },
+                {
+                  "id": "b06ff20e-9d96-4ee6-b63a-feb37f6d292d",
+                  "title": "PC Information disclosure",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Someone who wants to share data from the PC or that is stored on it.",
+                  "mitigation": "Use passwords or biometric data to access the PC and the applications where sensitive information is stored.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 39,
+                  "score": "4"
+                },
+                {
+                  "id": "0a4f6f86-f963-4cb7-9c92-a920c0e40d96",
+                  "title": "PC DoS",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Someone with the intention of blocking access to the PC.",
+                  "mitigation": "Configure the PC to prevent it from locking after a certain number of attempts and physically protect the device, as well as block the ports that are not in use.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 40,
+                  "score": "4"
+                }
+              ],
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
               "isPublicNetwork": false
-            },
-            "zIndex": 6
+            }
           },
           {
             "position": {
@@ -266,6 +386,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 7,
             "id": "ef8a9147-3de4-4374-803c-15eded493472",
             "data": {
               "type": "tm.Flow",
@@ -275,13 +396,26 @@
               "reasonOutOfScope": "",
               "privilegeLevel": "",
               "hasOpenThreats": false,
-              "threats": [],
+              "threats": [
+                {
+                  "id": "72262230-5ecd-4b8d-b928-af0d71f04b7e",
+                  "title": "TV Information disclosure",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "An individual with access to the televisions and the intention to steal account credentials such as Netflix, YouTube, etc., can turn on the television and obtain those credentials.",
+                  "mitigation": "Set up a password to access the television and close unused ports to prevent the connection of devices that could manipulate the equipment.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 28,
+                  "score": "5"
+                }
+              ],
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
               "isPublicNetwork": false
-            },
-            "zIndex": 7
+            }
           },
           {
             "position": {
@@ -304,6 +438,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 8,
             "id": "865e77db-8a65-4ef0-8f15-856972a791e3",
             "data": {
               "type": "tm.Flow",
@@ -358,8 +493,7 @@
               "protocol": "",
               "isEncrypted": true,
               "isPublicNetwork": false
-            },
-            "zIndex": 8
+            }
           },
           {
             "position": {
@@ -382,6 +516,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 9,
             "id": "bbbc89a8-ed77-4e71-b51e-74e969948aec",
             "data": {
               "type": "tm.Flow",
@@ -436,8 +571,7 @@
               "protocol": "",
               "isEncrypted": true,
               "isPublicNetwork": false
-            },
-            "zIndex": 9
+            }
           },
           {
             "position": {
@@ -460,6 +594,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 10,
             "id": "5c529b2f-72bc-4c50-97e5-c8498d3e4b53",
             "data": {
               "type": "tm.Flow",
@@ -474,8 +609,7 @@
               "protocol": "",
               "isEncrypted": true,
               "isPublicNetwork": false
-            },
-            "zIndex": 10
+            }
           },
           {
             "shape": "flow",
@@ -614,45 +748,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isBidirectional": false,
-              "reasonOutOfScope": "",
-              "protocol": "",
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "hasOpenThreats": false,
-              "threats": []
-            },
-            "id": "e45fa570-3869-4621-bb8c-b08e91505993",
-            "source": {
-              "cell": "2d00ea98-e1d2-4b3d-8377-d826e2c74b6a"
-            },
-            "target": {
-              "cell": "dd7a3869-beb1-40ad-967c-32d2cf522ae1"
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "User 2",
               "description": "",
               "outOfScope": false,
@@ -745,45 +840,6 @@
             },
             "target": {
               "cell": "2a47b8e8-0404-4357-845b-8655b4daa048"
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isBidirectional": false,
-              "reasonOutOfScope": "",
-              "protocol": "",
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "hasOpenThreats": false,
-              "threats": []
-            },
-            "id": "8eec6717-bbe4-41f0-835e-99c0945720b5",
-            "source": {
-              "cell": "471c7d73-547c-4684-9f0c-94b1463e9cb4"
-            },
-            "target": {
-              "cell": "dd7a3869-beb1-40ad-967c-32d2cf522ae1"
             }
           },
           {
@@ -934,45 +990,6 @@
               "hasOpenThreats": false,
               "threats": []
             },
-            "id": "e7336dd3-df48-4a71-9de7-4c3414ff74d8",
-            "source": {
-              "cell": "f955f2ec-1d33-4ea2-8184-b248284b56bf"
-            },
-            "target": {
-              "cell": "dd7a3869-beb1-40ad-967c-32d2cf522ae1"
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isBidirectional": false,
-              "reasonOutOfScope": "",
-              "protocol": "",
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "hasOpenThreats": false,
-              "threats": []
-            },
             "id": "10086f25-e412-4dc6-b9ce-c77ac6524bf6",
             "source": {
               "cell": "ef8a9147-3de4-4374-803c-15eded493472"
@@ -1090,45 +1107,6 @@
               "hasOpenThreats": false,
               "threats": []
             },
-            "id": "1550db12-849a-4c07-b919-e3eba254f810",
-            "source": {
-              "cell": "dd7a3869-beb1-40ad-967c-32d2cf522ae1"
-            },
-            "target": {
-              "cell": "bbbc89a8-ed77-4e71-b51e-74e969948aec"
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isBidirectional": false,
-              "reasonOutOfScope": "",
-              "protocol": "",
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "hasOpenThreats": false,
-              "threats": []
-            },
             "id": "cb9d5b5a-e99e-45b1-8829-69dd711aa3c7",
             "source": {
               "cell": "865e77db-8a65-4ef0-8f15-856972a791e3"
@@ -1174,7 +1152,8 @@
             },
             "target": {
               "cell": "5c529b2f-72bc-4c50-97e5-c8498d3e4b53"
-            }
+            },
+            "vertices": []
           },
           {
             "shape": "flow",
@@ -1213,7 +1192,8 @@
             },
             "target": {
               "cell": "0b3a886f-754f-4618-bd18-58b7370f2b9b"
-            }
+            },
+            "vertices": []
           },
           {
             "shape": "flow",
@@ -1294,6 +1274,176 @@
             }
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "d993c0b4-de87-4fcf-bfdd-dc69f503f7d5",
+            "source": {
+              "cell": "2d00ea98-e1d2-4b3d-8377-d826e2c74b6a"
+            },
+            "target": {
+              "cell": "dd7a3869-beb1-40ad-967c-32d2cf522ae1"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "56fd1c08-6548-4512-8b4f-55224bbd56b6",
+            "source": {
+              "cell": "471c7d73-547c-4684-9f0c-94b1463e9cb4"
+            },
+            "target": {
+              "cell": "dd7a3869-beb1-40ad-967c-32d2cf522ae1"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "5cb0b238-386f-4f01-a0c5-e1822560eb36",
+            "source": {
+              "cell": "f955f2ec-1d33-4ea2-8184-b248284b56bf"
+            },
+            "target": {
+              "cell": "dd7a3869-beb1-40ad-967c-32d2cf522ae1"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": [
+                {
+                  "id": "72645a97-a3d3-4c1d-ae1e-2ccf90adf30a",
+                  "title": "PC Tampering",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 37,
+                  "score": "4"
+                }
+              ]
+            },
+            "id": "a2e1c134-b86e-43a1-9b8a-9293d0c0595a",
+            "source": {
+              "cell": "dd7a3869-beb1-40ad-967c-32d2cf522ae1"
+            },
+            "target": {
+              "cell": "bbbc89a8-ed77-4e71-b51e-74e969948aec"
+            }
+          },
+          {
             "position": {
               "x": 800,
               "y": 176
@@ -1314,6 +1464,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 11,
             "id": "0b3a886f-754f-4618-bd18-58b7370f2b9b",
             "data": {
               "type": "tm.Flow",
@@ -1368,8 +1519,7 @@
               "protocol": "",
               "isEncrypted": false,
               "isPublicNetwork": false
-            },
-            "zIndex": 11
+            }
           },
           {
             "position": {
@@ -1397,8 +1547,8 @@
             },
             "visible": true,
             "shape": "store",
-            "id": "2aef46e8-532f-488b-ad89-96e42f089da9",
             "zIndex": 12,
+            "id": "2aef46e8-532f-488b-ad89-96e42f089da9",
             "data": {
               "type": "tm.Process",
               "name": "Microsoft cloud",
@@ -1519,6 +1669,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 13,
             "id": "d8887aa9-f744-4359-ae58-4cd765655fe0",
             "data": {
               "type": "tm.Process",
@@ -1612,8 +1763,7 @@
                 }
               ],
               "privilegeLevel": ""
-            },
-            "zIndex": 13
+            }
           }
         ],
         "description": "..."
@@ -1621,6 +1771,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Chat GPT",
-    "threatTop": 26
+    "threatTop": 40
   }
 }
