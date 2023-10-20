@@ -269,7 +269,7 @@
             "id": "ef8a9147-3de4-4374-803c-15eded493472",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "TVs",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -307,16 +307,56 @@
             "id": "865e77db-8a65-4ef0-8f15-856972a791e3",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Wireless Acces Point",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "privilegeLevel": "",
               "hasOpenThreats": false,
-              "threats": [],
-              "isBidirectional": false,
+              "threats": [
+                {
+                  "id": "9851f432-ce33-4b6d-a154-e4aa61ed4af7",
+                  "title": "Wireless Ap Tampering",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Tampering",
+                  "description": "Any external or internal individual with malicious intent seeking to tamper with, damage, or interfere with the exchange of information within the internal network.",
+                  "mitigation": "The device is kept in a concealed location to prevent unauthorized changes. Unoccupied router ports are disabled to avoid physical connections that could lead to configuration changes.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": "6"
+                },
+                {
+                  "id": "392329c2-5ce1-4f6f-b72a-a3c4ed2ab5d9",
+                  "title": "Wireless Ap Information disclosure",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Anyone with malicious intent intending to share data from the Wireless AP device.",
+                  "mitigation": "The device is kept in a concealed location to facilitate device changes. Unoccupied router ports are disabled to prevent physical connections that could lead to configuration changes.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": "6"
+                },
+                {
+                  "id": "54e2d9e8-7b97-49e6-a70e-8200deb1de8f",
+                  "title": "Wireless AP DoS",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Anyone with malicious intentions aiming to disrupt the services provided by the Wireless AP.",
+                  "mitigation": "Unoccupied router ports are disabled to prevent physical connections that could overwhelm the system.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": "7"
+                }
+              ],
+              "isBidirectional": true,
               "protocol": "",
-              "isEncrypted": false,
+              "isEncrypted": true,
               "isPublicNetwork": false
             },
             "zIndex": 8
@@ -345,16 +385,56 @@
             "id": "bbbc89a8-ed77-4e71-b51e-74e969948aec",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Switch",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "privilegeLevel": "",
               "hasOpenThreats": false,
-              "threats": [],
-              "isBidirectional": false,
+              "threats": [
+                {
+                  "id": "4f2c10cd-3dec-434b-a26e-cb88628dc521",
+                  "title": "Switch Tampering",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Anyone with malicious intent who wants to change, delete, or interfere with the collection of information within the network.",
+                  "mitigation": "The device is in a hidden place for device change.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": "8"
+                },
+                {
+                  "id": "5aa492ef-83e2-4a4f-b9a6-37d1170ed72d",
+                  "title": "Switch Information disclosure",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Any person with malicious intentions who wants to disclose information about the switch.",
+                  "mitigation": "Any information about the default credentials, model, or version of the product has been obscured. The device is concealed in a secure location to prevent unauthorized access and prevent untimely alterations.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": "8"
+                },
+                {
+                  "id": "b35ff169-10e2-43bb-8526-ec2e075bbf54",
+                  "title": "Switch DoS",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Any person with malicious intentions who seeks to disrupt the services provided by the switch.",
+                  "mitigation": "Unoccupied switch ports are disabled to prevent physical connections that could overwhelm the system.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": "9"
+                }
+              ],
+              "isBidirectional": true,
               "protocol": "",
-              "isEncrypted": false,
+              "isEncrypted": true,
               "isPublicNetwork": false
             },
             "zIndex": 9
@@ -383,7 +463,7 @@
             "id": "5c529b2f-72bc-4c50-97e5-c8498d3e4b53",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Firewall",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -392,7 +472,7 @@
               "threats": [],
               "isBidirectional": false,
               "protocol": "",
-              "isEncrypted": false,
+              "isEncrypted": true,
               "isPublicNetwork": false
             },
             "zIndex": 10
@@ -1237,16 +1317,56 @@
             "id": "0b3a886f-754f-4618-bd18-58b7370f2b9b",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Router",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "privilegeLevel": "",
               "hasOpenThreats": false,
-              "threats": [],
-              "isBidirectional": false,
+              "threats": [
+                {
+                  "id": "32575188-48b4-4e5c-92ca-932f285012a2",
+                  "title": "Router Tampering",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Any person with malicious intentions who wants to change, delete, or interrupt the traffic of the router.",
+                  "mitigation": "The router has a password different from the default, and it is changed periodically for security purposes.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": "9"
+                },
+                {
+                  "id": "9899a62f-594b-4ef9-bae8-8cc7f6cb2fff",
+                  "title": "Router Information disclosure",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Anyone who wants to share the credentials or technical aspects of the router.",
+                  "mitigation": "The label containing the router's default credentials, as well as any text revealing the type and version of the router, has been removed.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": "9"
+                },
+                {
+                  "id": "f393d855-495f-4500-8a7e-d08fd4081afb",
+                  "title": "Router DoS",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Anyone who wants to deny the service offered by the router.",
+                  "mitigation": "The wiring is protected, and we have control over the people who are connected to the internal network through Nmap.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 18,
+                  "score": "10"
+                }
+              ],
+              "isBidirectional": true,
               "protocol": "",
-              "isEncrypted": false,
+              "isEncrypted": true,
               "isPublicNetwork": false
             },
             "zIndex": 11
@@ -1266,11 +1386,11 @@
               },
               "topLine": {
                 "strokeWidth": 1.5,
-                "strokeDasharray": "4 3"
+                "strokeDasharray": null
               },
               "bottomLine": {
                 "strokeWidth": 1.5,
-                "strokeDasharray": "4 3"
+                "strokeDasharray": null
               }
             },
             "visible": true,
@@ -1281,7 +1401,7 @@
               "type": "tm.Process",
               "name": "Google cloud",
               "description": "A device that  permitted and prohibited web activity in a private network. ",
-              "outOfScope": true,
+              "outOfScope": false,
               "reasonOutOfScope": "It is not a fully user-controlled device.",
               "isALog": false,
               "storesCredentials": false,
@@ -1339,6 +1459,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Chat GPT",
-    "threatTop": 4
+    "threatTop": 18
   }
 }
