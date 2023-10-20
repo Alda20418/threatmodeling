@@ -1385,11 +1385,13 @@
                 "text": "Google cloud"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1407,8 +1409,22 @@
               "storesCredentials": false,
               "isEncrypted": false,
               "isSigned": false,
-              "hasOpenThreats": false,
-              "threats": [],
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "4eebff47-e6df-4165-bc58-38558ed931ab",
+                  "title": "MCloud Spoofing",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Someone who wants to impersonate someone else with the intention of gaining unauthorized access or carrying out malicious activities.",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": true,
+                  "number": 0,
+                  "score": "10"
+                }
+              ],
               "privilegeLevel": ""
             }
           },
@@ -1459,6 +1475,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Chat GPT",
-    "threatTop": 18
+    "threatTop": 19
   }
 }
