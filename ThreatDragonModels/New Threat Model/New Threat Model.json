@@ -1285,12 +1285,12 @@
               "hasOpenThreats": false,
               "threats": []
             },
-            "id": "e081dc34-e905-472f-8f88-e408aba19c9c",
+            "id": "cee5aaaa-a2e1-448b-ab49-2715db442969",
             "source": {
               "cell": "0b3a886f-754f-4618-bd18-58b7370f2b9b"
             },
             "target": {
-              "cell": "3af289b9-40e9-4d42-b706-b362a50cc1db"
+              "cell": "d8887aa9-f744-4359-ae58-4cd765655fe0"
             }
           },
           {
@@ -1317,7 +1317,7 @@
             "id": "0b3a886f-754f-4618-bd18-58b7370f2b9b",
             "data": {
               "type": "tm.Flow",
-              "name": "Router",
+              "name": "Data Flow",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -1364,9 +1364,9 @@
                   "score": "10"
                 }
               ],
-              "isBidirectional": true,
+              "isBidirectional": false,
               "protocol": "",
-              "isEncrypted": true,
+              "isEncrypted": false,
               "isPublicNetwork": false
             },
             "zIndex": 11
@@ -1375,6 +1375,128 @@
             "position": {
               "x": 901,
               "y": 116
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Microsoft cloud"
+              },
+              "topLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "2aef46e8-532f-488b-ad89-96e42f089da9",
+            "zIndex": 12,
+            "data": {
+              "type": "tm.Process",
+              "name": "Microsoft cloud",
+              "description": "A device that  permitted and prohibited web activity in a private network. ",
+              "outOfScope": false,
+              "reasonOutOfScope": "It is not a fully user-controlled device.",
+              "isALog": false,
+              "storesCredentials": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "4eebff47-e6df-4165-bc58-38558ed931ab",
+                  "title": "MCloud Spoofing",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Someone who wants to impersonate someone else with the intention of gaining unauthorized access or carrying out malicious activities.",
+                  "mitigation": "MFA enabled",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": "10"
+                },
+                {
+                  "id": "aae8ed8c-b9a8-4918-83bf-ecffd9315a87",
+                  "title": "MCloud Tampering",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Someone attempting to alter, upload, or delete information stored in the cloud or the traffic between the user and the cloud.",
+                  "mitigation": "Users do not share their passwords and use different passwords for each account.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": "9"
+                },
+                {
+                  "id": "9b6a6c0e-1655-4069-8e53-69b82aa67e9f",
+                  "title": "MCloud Repudiantion",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Repudiation",
+                  "description": "Someone who tries to claim they did not receive something when they actually did.",
+                  "mitigation": "Only use applications or software that ensure non-repudiation.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 23,
+                  "score": "8"
+                },
+                {
+                  "id": "98d5f407-2010-4f13-8f4f-28148b2b2f58",
+                  "title": "MCloud Information disclosure",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Someone who wants to spread private information with malicious intentions.",
+                  "mitigation": "Maintain cloud sharing controls so that only the owners can view the information.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 24,
+                  "score": "8"
+                },
+                {
+                  "id": "0eb1dbf3-2673-4f2b-9d1d-4c9d86843857",
+                  "title": "MCloud DoS",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Someone who wants to deny the service provided by the cloud.",
+                  "mitigation": "It does not depend on the user, as the infrastructure and control are managed by the company.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 25,
+                  "score": "9"
+                },
+                {
+                  "id": "251e55db-8c0b-451d-824d-66f02c89cd55",
+                  "title": "MCloud EoP",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Someone who wants to elevate their user privileges to carry out malicious actions.",
+                  "mitigation": "It does not depend on the user, as the infrastructure and control are managed by the company.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 26,
+                  "score": "9"
+                }
+              ],
+              "privilegeLevel": ""
+            }
+          },
+          {
+            "position": {
+              "x": 901,
+              "y": 236
             },
             "size": {
               "width": 120,
@@ -1397,8 +1519,7 @@
             },
             "visible": true,
             "shape": "store",
-            "id": "2aef46e8-532f-488b-ad89-96e42f089da9",
-            "zIndex": 12,
+            "id": "d8887aa9-f744-4359-ae58-4cd765655fe0",
             "data": {
               "type": "tm.Process",
               "name": "Google cloud",
@@ -1413,58 +1534,83 @@
               "threats": [
                 {
                   "id": "4eebff47-e6df-4165-bc58-38558ed931ab",
-                  "title": "MCloud Spoofing",
+                  "title": "GCloud Spoofing",
                   "status": "Mitigated",
                   "severity": "High",
                   "type": "Spoofing",
                   "description": "Someone who wants to impersonate someone else with the intention of gaining unauthorized access or carrying out malicious activities.",
-                  "mitigation": "",
+                  "mitigation": "MFA enabled",
                   "modelType": "STRIDE",
-                  "new": true,
-                  "number": 0,
+                  "new": false,
+                  "number": 20,
                   "score": "10"
+                },
+                {
+                  "id": "aae8ed8c-b9a8-4918-83bf-ecffd9315a87",
+                  "title": "GCloud Tampering",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Someone attempting to alter, upload, or delete information stored in the cloud or the traffic between the user and the cloud.",
+                  "mitigation": "Users do not share their passwords and use different passwords for each account.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": "9"
+                },
+                {
+                  "id": "9b6a6c0e-1655-4069-8e53-69b82aa67e9f",
+                  "title": "GCloud Repudiantion",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Repudiation",
+                  "description": "Someone who tries to claim they did not receive something when they actually did.",
+                  "mitigation": "Only use applications or software that ensure non-repudiation.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 23,
+                  "score": "8"
+                },
+                {
+                  "id": "98d5f407-2010-4f13-8f4f-28148b2b2f58",
+                  "title": "GCloud Information disclosure",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Someone who wants to spread private information with malicious intentions.",
+                  "mitigation": "Maintain cloud sharing controls so that only the owners can view the information.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 24,
+                  "score": "8"
+                },
+                {
+                  "id": "0eb1dbf3-2673-4f2b-9d1d-4c9d86843857",
+                  "title": "GCloud DoS",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Someone who wants to deny the service provided by the cloud.",
+                  "mitigation": "It does not depend on the user, as the infrastructure and control are managed by the company.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 25,
+                  "score": "9"
+                },
+                {
+                  "id": "251e55db-8c0b-451d-824d-66f02c89cd55",
+                  "title": "GCloud EoP",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Someone who wants to elevate their user privileges to carry out malicious actions.",
+                  "mitigation": "It does not depend on the user, as the infrastructure and control are managed by the company.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 26,
+                  "score": "9"
                 }
               ],
-              "privilegeLevel": ""
-            }
-          },
-          {
-            "position": {
-              "x": 901,
-              "y": 236
-            },
-            "size": {
-              "width": 120,
-              "height": 60
-            },
-            "attrs": {
-              "text": {
-                "text": "Microsoft Cloud"
-              },
-              "topLine": {
-                "strokeWidth": 1.5,
-                "strokeDasharray": "4 3"
-              },
-              "bottomLine": {
-                "strokeWidth": 1.5,
-                "strokeDasharray": "4 3"
-              }
-            },
-            "visible": true,
-            "shape": "store",
-            "id": "3af289b9-40e9-4d42-b706-b362a50cc1db",
-            "data": {
-              "type": "tm.Process",
-              "name": "Microsoft Cloud",
-              "description": "Is a metaphor for a global network of remote servers that operates as a single ecosystem.",
-              "outOfScope": true,
-              "reasonOutOfScope": "It is not a fully user-controlled device.",
-              "isALog": false,
-              "storesCredentials": false,
-              "isEncrypted": false,
-              "isSigned": false,
-              "hasOpenThreats": false,
-              "threats": [],
               "privilegeLevel": ""
             },
             "zIndex": 13
@@ -1475,6 +1621,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Chat GPT",
-    "threatTop": 19
+    "threatTop": 26
   }
 }
